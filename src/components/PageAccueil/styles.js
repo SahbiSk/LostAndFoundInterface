@@ -14,4 +14,13 @@ export default makeStyles((theme) => ({
     background: "var(--color-pink-dark)",
     color: "white",
   },
+  filter: {
+    background: "white",
+    display: "flex",
+    flexDirection: "column",
+    width: "75vw",
+    marginBottom: "5vh",
+    boxShadow: "1px 2px 5px rgba(0,0,0,0.2) ",
+    borderRadius: "10px",
+  },
 }));

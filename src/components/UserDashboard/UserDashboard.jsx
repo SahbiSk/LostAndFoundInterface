@@ -16,16 +16,16 @@ const UserDashboard = () => {
         <Container className={classes.profilePicSection}>
           <img
             className={classes.profilePic}
-            src="https://fashionhombre.com/wp-content/uploads/2019/03/Best-Pose-For-Your-Instagram-Photos-14.jpg"
+            src="https://static9.depositphotos.com/1371851/1141/i/600/depositphotos_11412590-stock-photo-handsome-young-man.jpg"
             alt="profile"
           />
           <Typography variant="h4" gutterBottom>
-            USER
+            sahbi
           </Typography>
         </Container>
         <Container className={classes.userInfoSection}>
           <Typography className={classes.contactInfo}>
-            <HomeIcon /> : address
+            <HomeIcon /> : Rue Ibn El-Jazzar,Sousse
           </Typography>
           <Typography className={classes.contactInfo}>
             <EmailIcon /> : user@user.com
@@ -36,7 +36,7 @@ const UserDashboard = () => {
         </Container>
       </Container>
       {/* <Grid item sm={12} md={6} lg={8}> */}
-      <Grid container spacing={5} className={classes.container}>
+      <Grid container spacing={0} className={classes.container}>
         {posts.map((post, key) => (
           <Post {...post} key={key} />
         ))}

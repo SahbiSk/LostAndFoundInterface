@@ -16,6 +16,7 @@ export default makeStyles((theme) => ({
   },
   profilePic: {
     width: "150px",
+    height:"150px",
     borderRadius: "50%",
     marginBottom: "3vh",
   },

@@ -23,6 +23,8 @@ const Post = ({
   paragraph,
   location: { pathname },
   history,
+  pic,
+  profilePic,
 }) => {
   const classes = usestyles();
   const buttons =
@@ -36,18 +38,14 @@ const Post = ({
         ];
 
   return (
-    <Grid item className={classes.postContainer} xs={10} md={5} lg={7}>
+    <Grid item className={classes.postContainer} xs={10} md={4} lg={4}>
       <Card>
         <CardContent className={classes.cardContent1}>
           <div
             className={classes.profilePicAndNameContainer}
             onClick={() => history.push("/profile")}
           >
-            <img
-              src="https://source.unsplash.com/random"
-              className={classes.profile}
-              alt="img"
-            />
+            <img src={profilePic} className={classes.profile} alt="img" />
             <Typography variant="h5">{author}</Typography>
           </div>
           <ButtonGroup className={classes.btnGrp}>
@@ -61,10 +59,7 @@ const Post = ({
           <Typography>Email : {email} </Typography>
           <Typography>Address : {address} </Typography>
         </CardContent>
-        <CardMedia
-          className={classes.cardMedia}
-          image="https://source.unsplash.com/random"
-        />
+        <CardMedia className={classes.cardMedia} image={pic} />
         <CardContent className={classes.cardContent2}>
           <Typography variant="body2" color="textSecondary">
             {paragraph}

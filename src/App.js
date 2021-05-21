@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PageAccueil from "./components/PageAccueil/PageAccueil";
 import Navbar from "./components/Navbar/Navbar";
 import AdminDashboard from "./components/AdminDashboard/AdminDashboard";
+import Login from "./components/Login/Login";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -16,6 +18,7 @@ const App = () => {
             <>
               <Navbar {...props} />
               <UserDashboard {...props} />
+              <Footer />
             </>
           )}
         />
@@ -26,6 +29,7 @@ const App = () => {
             <>
               <Navbar {...props} />
               <PageAccueil {...props} />
+              <Footer />
             </>
           )}
         />
@@ -34,11 +38,12 @@ const App = () => {
           exact
           render={(props) => (
             <>
-             
               <AdminDashboard {...props} />
+              
             </>
           )}
         />
+        <Route path="/auth" exact render={(props) => <Login {...props} />} />
       </Switch>
     </Router>
   );
